@@ -4,7 +4,7 @@ const EventEmitter = require('events');
 
 const uws = require(`./uws_${process.platform}_${process.versions.modules}`);
 const NativeServer = uws.Server;
-const EE_ERROR = "registering more than one listener to websocket";
+const EE_ERROR = Error("registering more than one listener to websocket");
 
 class Socket {
     /**
